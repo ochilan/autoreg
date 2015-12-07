@@ -72,8 +72,8 @@ int main(int argc, char** argv) {
     
     entity::type_t t0 = (fs::extension(file_paths_a[0]) == ".ifcmesh") ? entity::type_t::IFC : entity::type_t::PC;
     entity::type_t t1 = (fs::extension(file_paths_b[0]) == ".ifcmesh") ? entity::type_t::IFC : entity::type_t::PC;
-    auto e0 = std::make_shared<entity>(t0, file_paths_a[0].stem().string(), representations[0]->guid());
-    auto e1 = std::make_shared<entity>(t1, file_paths_b[0].stem().string(), representations[1]->guid());
+    auto e0 = std::make_shared<entity>(t0, "A" /*file_paths_a[0].stem().string()*/, representations[0]->guid());
+    auto e1 = std::make_shared<entity>(t1, "B" /*file_paths_b[0].stem().string()*/, representations[1]->guid());
 
     duraark_rdf::turtle_output turtle(output_file_string);
     write_prologue(turtle);
