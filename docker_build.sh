@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 REPO="$1"
 PROJECT="$2"
 
